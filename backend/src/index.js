@@ -6,7 +6,7 @@ const socketIo = require('socket.io');
 
 const router = require('./routes');
 
-mongoose.connect('mongodb://localhost:27017/ezorders', {
+mongoose.connect('mongodb://192.168.15.4:27017/ezorders', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
