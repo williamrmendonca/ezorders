@@ -17,10 +17,12 @@ const cardStatusVariants = {
 const cardTextStatusVariants = {
   PREPARING: css`color: #FFF;`,
   DONE: css`color: #FFF;`,
+  PENDING: css`color: #000;`,
 };
 
 export const Card = styled.View`
   background: #fff;
+  color: #000;
   flex-direction: row;
   height: 55px;
   margin-bottom: 16px;
