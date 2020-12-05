@@ -22,7 +22,7 @@ export default function Modal({ visible, onRequestClose }) {
   const [description, setDescription] = useState(null);
 
   function handleSubmit() {
-    fetch('http://192.168.1.65:3001/orders', {
+    fetch('http://192.168.15.4:3001/orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

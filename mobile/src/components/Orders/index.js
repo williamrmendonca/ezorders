@@ -9,11 +9,11 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch('http://192.168.1.65:3001/orders')
+    fetch('http://192.168.15.4:3001/orders')
       .then((res) => res.json())
       .then(setOrders);
 
-    const socket = socketIo('http://192.168.1.65:3001', {
+    const socket = socketIo('http://192.168.15.4:3001', {
       transports: ['websocket'],
     });
 
