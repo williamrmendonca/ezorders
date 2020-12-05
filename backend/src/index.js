@@ -7,7 +7,7 @@ const socketIo = require('socket.io');
 const router = require('./routes');
 
 //informar link de conexao
-mongoose.connect('mongodb://192.168.15.4:27017/ezorders', {
+mongoose.connect(process.env.MONGODB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
@@ -25,4 +25,4 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-server.listen(3001, () => console.log('🔥 Server started at localhost:3001'));
+server.listen(process.env.PORT || 3001, () => console.log(`🔥 Server started at port:${process.env.PORT || 3001}`));
