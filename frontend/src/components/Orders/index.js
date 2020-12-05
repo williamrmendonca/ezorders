@@ -7,11 +7,11 @@ export default function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/orders')
+    fetch('http://192.168.15.4:3001/orders')
       .then((res) => res.json())
       .then(setOrders);
 
-    const socket = socketIo('http://localhost:3001', {
+    const socket = socketIo('http://192.168.15.4:3001', {
       transports: ['websocket'],
     });
 
@@ -27,7 +27,7 @@ export default function Orders() {
   }, []);
 
   function handleStatusChange(status, order) {
-    fetch(`http://localhost:3001/orders/${order._id}/status`, {
+    fetch(`http://192.168.15.4:3001/orders/${order._id}/status`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

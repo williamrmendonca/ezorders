@@ -6,6 +6,7 @@ const socketIo = require('socket.io');
 
 const router = require('./routes');
 
+//informar link de conexao
 mongoose.connect('mongodb://192.168.15.4:27017/ezorders', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
